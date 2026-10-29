@@ -1,5 +1,6 @@
-package parking_lot.entities;
+package parking_lot.entities.price_decorator;
 
+import parking_lot.entities.Ticket;
 import parking_lot.strategy.PriceCalculatorStrategy;
 
 public class BasePrice implements Price {
@@ -19,6 +20,6 @@ public class BasePrice implements Price {
 
     @Override
     public String getDescription() {
-        return "Base Price for vehicles having more than 2 wheels";
+        return "Base Price for vehicles";
     }
 }

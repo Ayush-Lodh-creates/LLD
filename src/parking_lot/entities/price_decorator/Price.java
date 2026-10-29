@@ -1,4 +1,4 @@
-package parking_lot.entities;
+package parking_lot.entities.price_decorator;
 
 public interface Price {
 
