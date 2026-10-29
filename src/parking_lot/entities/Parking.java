@@ -312,6 +312,7 @@ public class Parking {
                     slot.lock.unlock();
                 }
             }
+            bookedTickets.remove(ticket.getVehicleNumber(), ticket);
             ticket.setCurrentState(new ExitedState());
             publishTicketEvent(EventType.SLOTS_FREED, ticket);
         } finally {
@@ -323,6 +324,13 @@ public class Parking {
         ticket.lock.lock();
         try {
             if (pendingTicketsMap.get(ticket.getVehicleNumber()) != ticket) {
+                return;
+            }
+            if (System.currentTimeMillis() - ticket.getEntryAt() >= 15 * 60 * 1000L) {
+                ticket.expire();
+                pendingTicketsMap.remove(ticket.getVehicleNumber(), ticket);
+                bookedTickets.remove(ticket.getVehicleNumber(), ticket);
+                publishTicketEvent(EventType.TICKET_EXPIRED, ticket);
                 return;
             }
             // Simulate payment processing.
