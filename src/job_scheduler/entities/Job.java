@@ -18,7 +18,7 @@ public class Job implements Delayed {
     private final Runnable task;
     private final Priority priority;
     private final TaskType taskType;
-    private Long runAt;
+    private volatile long runAt;
     private Long intervalDelay;
     private Integer order = orderCounter.getAndIncrement();
 
@@ -56,6 +56,10 @@ public class Job implements Delayed {
         return runAt;
     }
 
+    public void setRunAt(long runAt) {
+        this.runAt = runAt;
+    }
+
     public AtomicReference<Status> getStatus() {
         return status;
     }
@@ -70,7 +74,7 @@ public class Job implements Delayed {
 
     @Override
     public long getDelay(TimeUnit unit) {
-        return Math.max(0, runAt - System.currentTimeMillis());
+        return unit.convert(runAt - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
     }
 
     @Override
