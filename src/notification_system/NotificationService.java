@@ -24,7 +24,7 @@ public class NotificationService {
         clientLockMap = new ConcurrentHashMap<>();
     }
 
-    public static NotificationService getInstance() {
+    public synchronized static NotificationService getInstance() {
         if (notificationService == null) {
             notificationService = new NotificationService();
         }
