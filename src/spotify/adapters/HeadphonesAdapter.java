@@ -5,9 +5,9 @@ import spotify.external_system.HeadphonesAPI;
 
 public class HeadphonesAdapter extends IAudioOutput{
 
-    private HeadphonesAPI headphonesAPI;
+    private final HeadphonesAPI headphonesAPI;
 
-    public void setHeadphonesAPI() {
+    public HeadphonesAdapter() {
         this.headphonesAPI = new HeadphonesAPI();
     }
 

@@ -6,9 +6,9 @@ import spotify.external_system.WiredSpeakerAPI;
 
 public class WiredSpeakerAdapter extends IAudioOutput{
 
-    private WiredSpeakerAPI wiredSpeakerAPI;
+    private final WiredSpeakerAPI wiredSpeakerAPI;
 
-    public void setWiredSpeakerAPI() {
+    public WiredSpeakerAdapter() {
         this.wiredSpeakerAPI = new WiredSpeakerAPI();
     }
 

@@ -5,9 +5,9 @@ import spotify.external_system.BluetoothSpeakerAPI;
 
 public class BluetoothSpeakerAdapter extends IAudioOutput{
 
-    private BluetoothSpeakerAPI bluetoothSpeakerAPI;
+    private final BluetoothSpeakerAPI bluetoothSpeakerAPI;
 
-    public void setBluetoothSpeakerAPI() {
+    public BluetoothSpeakerAdapter() {
         this.bluetoothSpeakerAPI = new BluetoothSpeakerAPI();
     }
 
