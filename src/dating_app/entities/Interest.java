@@ -1,4 +1,4 @@
-package dating_app;
+package dating_app.entities;
 
 public class Interest {
     private final String name;
@@ -12,3 +12,4 @@ public class Interest {
     public String getName() { return name; }
     public String getCategory() { return category; }
 }
+

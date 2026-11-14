@@ -1,4 +1,6 @@
-package dating_app;
+package dating_app.entities;
+
+import dating_app.NotificationService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,3 +36,4 @@ public class ChatRoom {
         }
     }
 }
+

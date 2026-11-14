@@ -1,4 +1,8 @@
-package dating_app;
+package dating_app.entities;
+
+import dating_app.enums.SwipeAction;
+import dating_app.observer.NotificationObserver;
+import dating_app.observer.UserNotificationObserver;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,3 +35,4 @@ public class User {
         swipeHistory.put(otherId, action);
     }
 }
+

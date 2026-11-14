@@ -1,4 +1,7 @@
-package dating_app;
+package dating_app.strategy;
+
+import dating_app.entities.Interest;
+import dating_app.entities.User;
 
 public class InterestBasedMatcher implements Matcher {
     @Override
@@ -15,3 +18,4 @@ public class InterestBasedMatcher implements Matcher {
         return commonInterests;
     }
 }
+

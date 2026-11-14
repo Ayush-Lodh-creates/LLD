@@ -1,4 +1,6 @@
-package dating_app;
+package dating_app.observer;
+
+import dating_app.entities.Message;
 
 public class UserNotificationObserver extends NotificationObserver {
     private final String userId;
@@ -10,3 +12,4 @@ public class UserNotificationObserver extends NotificationObserver {
         System.out.println("Notification for " + userId + ": " + message);
     }
 }
+

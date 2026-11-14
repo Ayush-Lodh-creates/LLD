@@ -1,4 +1,4 @@
-package dating_app;
+package dating_app.entities;
 
 import java.time.LocalDateTime;
 
@@ -17,3 +17,4 @@ public class Message {
     public String getContent() { return content; }
     public LocalDateTime getTime() { return time; }
 }
+

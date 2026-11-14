@@ -1,5 +1,8 @@
 package dating_app;
 
+import dating_app.entities.Message;
+import dating_app.observer.NotificationObserver;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,3 +24,4 @@ public class NotificationService {
         for (NotificationObserver observer : observers.values()) observer.update(message);
     }
 }
+

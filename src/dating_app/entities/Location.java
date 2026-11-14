@@ -1,4 +1,4 @@
-package dating_app;
+package dating_app.entities;
 
 public class Location {
     private final double latitude;
@@ -23,3 +23,4 @@ public class Location {
         return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     }
 }
+

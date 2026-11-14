@@ -1,5 +1,10 @@
 package dating_app;
 
+import dating_app.entities.Location;
+import dating_app.entities.User;
+import dating_app.strategy.BasicLocationStrategy;
+import dating_app.strategy.LocationStrategy;
+
 import java.util.List;
 
 public class LocationService {
@@ -14,3 +19,4 @@ public class LocationService {
         return strategy.findNearbyUsers(location, maxDistance, allUsers);
     }
 }
+

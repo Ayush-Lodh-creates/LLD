@@ -1,4 +1,6 @@
-package dating_app;
+package dating_app.strategy;
+
+import dating_app.entities.User;
 
 public class LocationBasedMatcher implements Matcher {
     @Override
@@ -7,3 +9,4 @@ public class LocationBasedMatcher implements Matcher {
         return 1.0 / (1.0 + distance); // Closer users have higher scores.
     }
 }
+

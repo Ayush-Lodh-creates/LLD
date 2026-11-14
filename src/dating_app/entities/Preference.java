@@ -1,4 +1,6 @@
-package dating_app;
+package dating_app.entities;
+
+import dating_app.enums.Gender;
 
 import java.util.List;
 
@@ -33,3 +35,4 @@ public class Preference {
                 && (interestedIn.isEmpty() || interestedIn.contains(profile.getGender()));
     }
 }
+

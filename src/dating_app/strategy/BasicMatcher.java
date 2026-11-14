@@ -1,4 +1,6 @@
-package dating_app;
+package dating_app.strategy;
+
+import dating_app.entities.User;
 
 public class BasicMatcher implements Matcher {
     @Override
@@ -7,3 +9,4 @@ public class BasicMatcher implements Matcher {
                 && candidate.getPreference().meets(user.getProfile()) ? 1 : 0;
     }
 }
+

@@ -1,5 +1,15 @@
 package dating_app;
 
+import dating_app.entities.ChatRoom;
+import dating_app.entities.Interest;
+import dating_app.entities.Location;
+import dating_app.entities.Preference;
+import dating_app.entities.User;
+import dating_app.entities.UserProfile;
+import dating_app.enums.Gender;
+import dating_app.enums.MatcherType;
+import dating_app.enums.SwipeAction;
+
 import java.util.List;
 
 public class Main {
@@ -25,3 +35,4 @@ public class Main {
         }
     }
 }
+

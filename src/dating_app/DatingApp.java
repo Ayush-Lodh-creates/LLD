@@ -1,5 +1,12 @@
 package dating_app;
 
+import dating_app.entities.ChatRoom;
+import dating_app.entities.User;
+import dating_app.enums.MatcherType;
+import dating_app.enums.SwipeAction;
+import dating_app.factory.MatcherFactory;
+import dating_app.strategy.Matcher;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -63,3 +70,4 @@ public class DatingApp {
         return room;
     }
 }
+

@@ -1,4 +1,6 @@
-package dating_app;
+package dating_app.entities;
+
+import dating_app.enums.Gender;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,3 +37,4 @@ public class UserProfile {
         System.out.println(name + ", " + age + ", " + gender + " - " + bio);
     }
 }
+
